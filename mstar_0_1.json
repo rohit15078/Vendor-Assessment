@@ -49,31 +49,34 @@
           "items": [
             {
               "type": "info",
+              "text": "Identifying information security requirements in the earliest planning stages of a technology project is important to reduce the risk of introducing new security issues into the environment.  Involving Jubilant Information Security early on also minimizes potential project schedule delays when security requirements are retrofitted into systems. \n Below are the scenarios where one must involve information security office.",
               "id": "infoSec_questionnaire_intro",
-              "text": "Identifying information security requirements in the earliest planning stages of a technology project is important to reduce the risk of introducing new security issues into the environment.  Involving Jubilant Information Security early on also minimizes potential project schedule delays when security requirements are retrofitted into systems. \n Below are the scenarios where one must involve information security office."
-            },
-            {
-                "type": "radiogroup",
-                "text": "Select on scenario from below list",
-                "id": "infoSec_questionnaire_scenarios",
-                "choices": [
-                    {"scenario_new_application": "New Application Development/Implementation"},
-                    {"scenario_datacenter": "New Datacenter Physical/Cloud"},
-                    {"scenario_infrastructure": "Infrastructure Modification"},
-                    {"scenario_webapp": "On boarding Web Application"}
-                ]
-            },
-            {
-              "type": "info",
-              "id": "infoSec_questionnaire_post_script",
-              "text": "Kindly note that this is not the exhaustive list, one must involve Information Security team if any changes/new initiative in anyway impacts any of CIA (confidentiality, Integrity & Availability)."
-            },  
-            ] 
-            }
+              "items": [ 
+                {
+                  "type": "radiogroup",
+                  "text": "Select on scenario from below list",
+                  "id": "infoSec_questionnaire_scenarios",
+                  "required": true,
+                  "choices": [
+                      {"scenario_new_application": "New Application Development/Implementation"},
+                      {"scenario_datacenter": "New Datacenter Physical/Cloud"},
+                      {"scenario_infrastructure": "Infrastructure Modification"},
+                      {"scenario_webapp": "On boarding Web Application"}
+                    ]
+                },
+                {
+                  "type": "info",
+                  "text": "Kindly note that this is not the exhaustive list, one must involve Information Security team if any changes/new initiative in anyway impacts any of CIA (confidentiality, Integrity & Availability).",
+                  "id": "infoSec_questionnaire_post_script"
+                }
+              ]
+            }  
+          ] 
+        },
         {
           "type": "block",
-          "id": "block_application",
           "text": "New Application Development/Implementation",
+          "id": "block_application",
           "cond": "scenario_new_application",
           //Break 1
           "items": [
@@ -4808,8 +4811,8 @@
           "item": [
             {
               "type": "block",
-              "id": "block_office_security",
               "text": "Security at the Office",
+              "id": "block_office_security",
               "items": [
                 {
                   "type": "info",
